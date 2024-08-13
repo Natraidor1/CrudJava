@@ -4,6 +4,11 @@
  */
 package vista;
 
+import controlador.ctrlCodigos;
+import modelo.Codigos;
+
+
+
 /**
  *
  * @author Estudiante
@@ -15,6 +20,16 @@ public class frmCodigos extends javax.swing.JFrame {
      */
     public frmCodigos() {
         initComponents();
+    }
+    
+    public static void initFrmCodigos(){
+        
+        Codigos modelo = new Codigos();
+        frmCodigos vista = new frmCodigos();
+        ctrlCodigos controlador = new ctrlCodigos(modelo, vista);
+        
+        vista.setVisible(true);
+        
     }
 
     /**
